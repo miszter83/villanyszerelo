@@ -139,13 +139,20 @@ img {
 
 main {
     background-color: var(--black);
-    display: flex;
-    justify-content: center;
     
+   
+}
+.services {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%;
+    justify-content: center;
     
 }
 
-.service-main {
+.service-main, .contact {
     font-size: 2rem;
     font-weight: 500;
     text-align: center;
@@ -184,7 +191,7 @@ main {
 .free {
     font-size: 1.6rem;
     font-weight: 400;
-    margin: 3rem 2rem 3rem 2rem;
+    margin: 0rem 2rem 5rem 2rem;
     text-align: center;
 }
 
@@ -192,12 +199,73 @@ p, .grid-list {
     font-size: 1.5rem;
 }
 
+/* ŰRLAP */
+
+.contact {
+    text-align: center;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    width:40%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.form-input {
+    border: none;
+    background: none;
+    color: var(--main-input-color);
+    border-bottom: 2px solid whitesmoke;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+::placeholder {
+    font-size: 1.5rem;
+}
+
+.form-input-btn {
+
+
+}
+.btn {
+    text-decoration: none;
+    background: none;
+    display: block;
+    font-size: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid whitesmoke;
+    margin: 1rem auto 0rem auto;
+    width: 40%;
+    
+}
+
+@keyframes btn-transform {
+    from {background-color:  rgba(26,78,114,1)}
+    to {background-color: rgba(36,36,39,1);}
+   } 
+
+.btn:hover {
+    animation-name: btn-transform;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+  
+}
 /* FOOTER */
 
 .footer-box {
     display: flex;
     justify-content: center;
     background: linear-gradient(0deg, rgba(26,78,114,1) 0%, rgba(36,36,39,1) 100%);
+    padding-top: 4rem;
 }
 
 .footer-list-item {
