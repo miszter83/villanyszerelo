@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="./css/stlye.css">
 </head>
 <body>
-    <header>
+    <header class="main-page">
         <nav class="header-box">
             <div class="logo"><a href="./index.html"><img src="./media/villanyszereleslogo-rbg.png" alt="logo"></a></div>
             <div class="menu">
-                <ul class="menu-list">
+                <ul class="header-menu-list menu-list">
                     <li><a class="list-item" href="./index.html">Főoldal</a></li>
                     <li><a class="list-item" href="./épületvillamosság.html">Épületvillamosság</a></li>
                     <li><a class="list-item" href="./garanciális-beüzemelés.html">Beüzemelés</a></li>
@@ -24,7 +24,7 @@
             </div>
         </nav>
         <div class="main-title-background">
-            <h1 class="main-title">Villanyszerelés</h1>
+            <h1 class="main-title">Villszer Kft.</h1>
         </div>
     </header>
     <main>
@@ -38,17 +38,23 @@
                 <li class="service-main-item" >Kisebb villanyszerelési munkák.</li>
                 <li class="service-main-item" >Elektromos berendezések bekötése.</li>
             </ul>
-        
-            <p class="callme">Hívjon, vagy írjon bizalommal, akár komplett kivitelezés, akár kisebb munkáról van szó!</p>
-            <p class="free">Vas megyében ingyenes kiszállás!</p>
         </section>
+        <div class="callme-box">
+            <div class="callme-box-item-1">
+                <p class="callme">Hívjon, vagy írjon bizalommal, akár komplett kivitelezés, akár kisebb munkáról van szó!</p>
+                <p class="free">Vas vár(:D)megyében ingyenes kiszállás!</p>
+            </div>
+            <div class="callme-box-item-2">
+                <img class="img-szerelo" src="./media/szerelő.jpg" alt="szerelő">
+            </div>
+        </div>
         <section>
             <h2 class="contact">Kapcsolat</h2>
             <form action="https://formspree.io/f/mbjejapa" method="post">
-                <input class="form-input" type="text" name="nev" id="nev" placeholder="Név">
-                <input class="form-input" type="email" name="email" id="email" placeholder="E-mail">
+                <input class="form-input" type="text" name="nev" id="nev" placeholder="Név" required>
+                <input class="form-input" type="email" name="email" id="email" placeholder="E-mail" required>
                 <input class="form-input" type="tel" name="telefon" id="telefon" placeholder="Telefonszám">
-                <textarea  class="form-input" placeholder="Üzenet" name="uzenet" id="uezenet" cols="30" rows="10"></textarea>
+                <textarea  class="form-input" placeholder="Üzenet" name="uzenet" id="uezenet" cols="30" rows="10" required></textarea>
                 <button class="btn form-input-btn" type="submit">Elküld</button>
             </form>
         </section>
@@ -58,9 +64,7 @@
     </main>
 
     <footer>
-        <nav>
         <div class="footer-box">
-            <div class="logo"><a href="./index.html"><img src="./media/villanyszereleslogo-rbg.png" alt="logo"></a></div>
             <div class="menu">
                 <ul class="menu-list">
                     <li><a class="footer-list-item" href="./index.html">Főoldal</a></li>
@@ -70,7 +74,6 @@
                 </ul>
             </div>
         </div>
-    </nav>
     </footer>
 </body>
 </html>

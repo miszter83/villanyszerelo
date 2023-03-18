@@ -70,21 +70,28 @@ table {
 body{
     font-family: 'Montserrat', sans-serif;
     text-rendering: optimizeLegibility;
+    background-color: hsl(240, 4%, 15%);
     
+    /*background: linear-gradient(180deg, rgba(26,78,114,1) 0%, rgba(26,78,114,1) 70%, rgba(36,36,39,1) 100%);*/
 }
 
 /* HEADER */ 
-
 header {
+    background: linear-gradient(180deg, rgba(26,78,114,1) 0%, rgba(36,36,39,1) 100%);
+}
+
+.main-page {
     background-image: linear-gradient(rgba(0, 0, 0, 0) 80%, rgba(36, 36, 39, 1)), url("../media/lightningwires.jpg");
     height: 100vh;
     background-size: cover;
 }
+
 nav
  {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 0.3rem;
 }
 
 .header-box,
@@ -93,17 +100,25 @@ nav
     justify-content: space-between;
     align-items: center;
     
+    
 }
 
-img {
-    width: 75px;
-    height: 75px;
+img, .logo {
     border-radius: 15px;
-    
+    width: 100px;
+    height: 100px;
+}
+
+.logo:hover {
+    color: rgb(253, 250, 250);
+    transition: color border 0.2s;
 }
 .menu-list {
-    display: flex;
-    
+    display: flex;   
+}
+
+.header-menu-list {
+    margin-right: 2rem;
 }
 .list-item,.footer-list-item {
     font-size: 1.2rem;
@@ -122,17 +137,21 @@ img {
     
 
 }
-.main-title {
-    font-size: 5rem;
+.main-title, .main-sub-title {
+    font-size: 7rem;
     letter-spacing: 2px;
     font-weight: 600;
     color: whitesmoke;
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 10rem;
     font-family: 'Montserrat';
     text-shadow: 2px 2px 10px rgba(36, 36, 39, 1);
-    
+}
 
+.main-sub-title {
+    font-size: 5rem;
+    margin-top: 0;
+    padding: 5rem;
 }
 
 /* MAIN */
@@ -152,13 +171,18 @@ main {
     
 }
 
+.service-main-box {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+}
+
 .service-main, .contact {
     font-size: 2rem;
     font-weight: 500;
     text-align: center;
     margin: 2rem;
     padding-bottom: 1rem;
-    border-bottom: 2px solid;
+    
 }
 
 
@@ -167,51 +191,49 @@ main {
     margin: 2.5rem;
 }
 
-
-
-.grid-box {
-  
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: auto auto;
-    max-width: 960px;
-    gap: 1.5rem;
-        
+.callme-box{
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+    align-items: center;
+    
 }
 
-.callme {
+.callme-box-item-1 {
+    max-width: 40%;
+    line-height: 4rem;
+}
+.callme-box-item-1 p {
     font-size: 2rem;
-    font-weight: 400;
-    margin: 3rem 2rem 3rem 2rem;
-    border-top: 2px solid;
-    padding-top: 4rem;
-    text-align: center;
+    padding: 1rem;
+    
 }
 
-.free {
-    font-size: 1.6rem;
-    font-weight: 400;
-    margin: 0rem 2rem 5rem 2rem;
-    text-align: center;
+
+.img-szerelo {
+    object-fit: contain;
+    margin-top: 2rem;
+    width: 100%;
+    height: auto;
 }
 
-p, .grid-list {
-    font-size: 1.5rem;
-}
 
 /* ŰRLAP */
 
 .contact {
+    border-top: 2px solid;
     text-align: center;
     width: 75%;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 3rem;
 }
 
 form {
     width:40%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 2rem;
 
 }
 
@@ -230,10 +252,6 @@ form {
     font-size: 1.5rem;
 }
 
-.form-input-btn {
-
-
-}
 .btn {
     text-decoration: none;
     background: none;
@@ -244,6 +262,7 @@ form {
     border: 1px solid whitesmoke;
     margin: 1rem auto 0rem auto;
     width: 40%;
+    cursor: pointer;
     
 }
 
@@ -259,13 +278,58 @@ form {
 
   
 }
+
+/* MAIN ÉPÜLETVILLAMOSSÁG ALOLDAL */
+
+
+.grid-box {
+  
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-rows: auto auto;
+    grid-template-columns: 50% 50%;
+    max-width: 75%;
+    gap: 2rem;     
+    align-items: center;
+}
+.grid-elem-list {
+    list-style: "\2714   ";
+    padding-left: 1rem;    
+}
+
+.grid-list {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+p, .grid-list {
+    font-size: 1.5rem;
+    max-width: 100%;
+    
+}
+.grid-elem p {
+    padding: 1rem;
+}
+  
+.grid-elem-img img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    
+}
+
+/* MAIN REFERENCIÁK ALOLDAL */
+
 /* FOOTER */
+
 
 .footer-box {
     display: flex;
     justify-content: center;
-    background: linear-gradient(0deg, rgba(26,78,114,1) 0%, rgba(36,36,39,1) 100%);
+    background: linear-gradient(0deg, #1a4e72 0%, #242427 100%);
     padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 .footer-list-item {
