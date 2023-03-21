@@ -9,11 +9,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/stlye.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@2/flickity-fade.css">
 </head>
 <body>
     <header>
         <nav class="header-box">
-            <div class="logo"><a href="./index.html"><img src="./media/villanyszereleslogo-rbg.png" alt="logo"></a></div>
+            <div class="logo"><a href="./index.html"><img class="logo" src="./media/villanyszereleslogo-rbg.png" alt="logo"></a></div>
             <div class="menu">
                 <ul class="menu-list">
                     <li><a class="list-item" href="./index.html">Főoldal</a></li>
@@ -25,13 +27,54 @@
         </nav>
     </header>
     <main>
+      <div id="page-containter">
+         <div id="content-wrap">
+
+
+      
         <h1 class="main-sub-title">Referenciák</h1>
-        <div class="grid-box-ref">
-            <div class="grid-elem-ref"></div>
-            <div class="grid-elem-ref"><img src="./references/ref01.jpg" alt="Referencia kép első"></div>
-            <div class="grid-elem-ref"><img src="./references/ref02.jpg" alt="Referencia kép második"></div>
-            <div class="grid-elem-ref"><img src="./references/ref03.jpg" alt="Referencia kép harmadik"></div>
-        </div>
+        
+        <!-- Flickity HTML init -->
+<div class="carousel" data-flickity='{ "fade": true, "imagesLoaded": true }'>
+   <div class="carousel-cell">
+     <img class="carousel-cell-image" src="https://picsum.photos/720/540/?image=517" />
+   </div>
+   <div class="carousel-cell">
+     <img class="carousel-cell-image" src="https://picsum.photos/540/720/?image=696" />
+   </div>
+   <div class="carousel-cell">
+     <img class="carousel-cell-image" src="https://picsum.photos/720/540/?image=56" />
+   </div>
+   <div class="carousel-cell">
+     <img class="carousel-cell-image" src="https://picsum.photos/800/500/?image=1084" />
+   </div>
+   <div class="carousel-cell">
+     <img class="carousel-cell-image" src="https://picsum.photos/720/540/?image=1080" />
+   </div>
+   <div class="carousel-cell">
+     <img class="carousel-cell-image" src="https://picsum.photos/640/640/?image=1074" />
+   </div>
+   <div class="carousel-cell">
+     <img class="carousel-cell-image" src="https://picsum.photos/720/540/?image=1069" />
+   </div>
+   <div class="carousel-cell">
+     <img class="carousel-cell-image" src="https://picsum.photos/800/500/?image=1062" />
+   </div>
+   <div class="carousel-cell">
+     <img class="carousel-cell-image" src="https://picsum.photos/720/540/?image=1002" />
+   </div>
+   <div class="carousel-cell">
+     <img class="carousel-cell-image" src="https://picsum.photos/640/640/?image=935" />
+   </div>
+   <div class="carousel-cell">
+     <img class="carousel-cell-image" src="https://picsum.photos/720/540/?image=855" />
+   </div>
+   <div class="carousel-cell">
+     <img class="carousel-cell-image" src="https://picsum.photos/640/640/?image=824" />
+   </div>
+ </div>
+ 
+
     </main>
 
     <footer>
@@ -45,6 +88,10 @@
                 </ul>
             </div>
         </div>
+      </div>
+      </div> 
     </footer>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity-fade@2/flickity-fade.js"></script>
 </body>
 </html>
