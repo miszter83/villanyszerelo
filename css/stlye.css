@@ -107,17 +107,12 @@ nav
 }
 
 
-
 .logo {
-    border-radius: 15px;
     width: 100px;
     height: 100px;
 }
 
-.logo:hover {
-    color: #fdfafa;
-    transition: color border 0.2s;
-}
+
 .menu-list {
     display: flex;   
 }
@@ -398,4 +393,19 @@ footer {
 
 .footer-list-item {
     font-size: 1rem;
+}
+
+/* FOOTER - REFERENCIÁK */
+.page-container {
+    position: relative;
+    min-height: 100%;
+}
+.content-wrap {
+    padding-bottom: 0;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
 }
