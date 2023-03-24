@@ -88,6 +88,7 @@ header {
     background-image: linear-gradient(rgba(0, 0, 0, 0) 80%, rgba(36, 36, 39, 1)), url("../media/lightningwires.jpg");
     height: 100vh;
     background-size: cover;
+    background-position: center;
 }
 
 nav
@@ -147,8 +148,11 @@ nav
 
 .main-sub-title {
     font-size: 5rem;
-    margin-top: 0;
-    padding: 5rem;
+    margin: 4rem;
+}
+
+.main-subtitle-flex {
+    margin-bottom: 10rem;
 }
 
 /* MAIN */
@@ -193,6 +197,7 @@ main {
     justify-content: center;
     margin: 3rem 0;
     align-items: center;
+    gap: 2rem;
     
 }
 
@@ -203,6 +208,7 @@ main {
 .callme-box-item-1 p {
     font-size: 2rem;
     padding: 1rem;
+    line-height: 4rem;
     
 }
 
@@ -280,15 +286,17 @@ form {
 
 
 .grid-box {
-  
     display: grid;
     margin-left: auto;
     margin-right: auto;
     grid-template-rows: auto auto;
     grid-template-columns: 50% 50%;
     max-width: 75%;
-    gap: 2rem;     
+    column-gap: 4rem;     
     align-items: center;
+    gap: 2rem;
+    
+    
 }
 .grid-elem-list {
     list-style: "\2714   ";
@@ -298,11 +306,14 @@ form {
 .grid-list {
     font-size: 1.5rem;
     padding: 1rem;
+    line-height: 2rem;
+    
 }
 
-p, .grid-list {
+p {
     font-size: 1.5rem;
     max-width: 100%;
+    line-height: 2rem;
     
 }
 .grid-elem p {
@@ -314,6 +325,12 @@ p, .grid-list {
     width: 100%;
     height: auto;
     
+}
+
+/* GARANCIÁLIS BEÜZELEMÉS ALOLDAL */
+
+.brands-img {
+    max-width: 85%;
 }
 
 /* MAIN REFERENCIÁK ALOLDAL */
@@ -396,16 +413,44 @@ footer {
 }
 
 /* FOOTER - REFERENCIÁK */
-.page-container {
-    position: relative;
-    min-height: 100%;
+.fullflex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
 }
-.content-wrap {
-    padding-bottom: 0;
-}
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    
+
+
+
+/* RESZPONZÍV */
+
+@media screen and (max-width: 1400px) {
+    .main-title, .main-sub-title {
+        font-size: 4rem;
+        margin-top: 2rem;
+       
+    }
+
+    .main-sub-title {
+        padding: 2rem;
+    }
+
+    .main-page {
+        height: 50vh;
+    }
+
+    .service-main-item, .grid-list {
+       font-size: 1.2rem;
+    }
+    .callme-box-item-1 p {
+        font-size: 1.2rem;
+        padding: 0rem;
+        
+    }
+       .img-szerelo {
+        max-width: 300px
+    }
+    .grid-box {
+        column-gap: 6rem;
+    }
 }
