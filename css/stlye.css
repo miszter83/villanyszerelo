@@ -218,6 +218,7 @@ main {
     margin-top: 2rem;
     width: 100%;
     height: auto;
+    border: 2px solid;
 }
 
 
@@ -241,13 +242,14 @@ form {
 }
 
 .form-input {
+    display: block;
     border: none;
     background: none;
     color: var(--main-input-color);
     border-bottom: 2px solid whitesmoke;
     width: 100%;
-    margin: 1rem 0;
-    padding: 1rem;
+    margin: 1rem auto 0 auto;
+    padding: 1rem 0;
     font-size: 1.5rem;
 }
 
@@ -285,25 +287,30 @@ form {
 /* MAIN ÉPÜLETVILLAMOSSÁG ALOLDAL */
 
 
-.grid-box {
-    display: grid;
-    margin-left: auto;
-    margin-right: auto;
-    grid-template-rows: auto auto;
-    grid-template-columns: 50% 50%;
+.main-flex-box {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto 6rem auto;
     max-width: 75%;
-    column-gap: 4rem;     
     align-items: center;
-    gap: 2rem;
+    
     
     
 }
-.grid-elem-list {
+.flexbox {
+    display: flex;
+    margin-bottom: 4rem;
+    align-items: center;
+    
+
+}
+.flex-item-list {
     list-style: "\2714   ";
-    padding-left: 1rem;    
+    padding-left: 1rem; 
+       
 }
 
-.grid-list {
+.flex-list {
     font-size: 1.5rem;
     padding: 1rem;
     line-height: 2rem;
@@ -316,21 +323,35 @@ p {
     line-height: 2rem;
     
 }
-.grid-elem p {
+.flex-item p {
     padding: 1rem;
 }
   
-.grid-elem-img img {
-    object-fit: contain;
-    width: 100%;
+.flex-item-img img {
+    padding: 0rem;
+    width: 500px;
     height: auto;
-    
+    border: 2px solid;
 }
 
+hr {
+    width: 75vw;
+    border-width: 2px;
+    margin-bottom: 2rem;
+}
 /* GARANCIÁLIS BEÜZELEMÉS ALOLDAL */
 
+.flex-box {
+    display: flex;
+    width: 75%;
+    margin: 0 auto 2rem auto;
+    justify-content: center;
+    align-items: center;
+}
+
 .brands-img {
-    max-width: 85%;
+    max-width: 500px;
+    border: 2px solid #f5f5f5;
 }
 
 /* MAIN REFERENCIÁK ALOLDAL */
@@ -439,7 +460,7 @@ footer {
         height: 50vh;
     }
 
-    .service-main-item, .grid-list {
+    .service-main-item, .flex-list {
        font-size: 1.2rem;
     }
     .callme-box-item-1 p {
@@ -447,10 +468,42 @@ footer {
         padding: 0rem;
         
     }
-       .img-szerelo {
+    .img-szerelo {
         max-width: 300px
     }
-    .grid-box {
-        column-gap: 6rem;
+    .flex-item-img img{
+        max-width: 350px;
     }
 }
+
+@media screen and (max-width: 992px) {
+    .flexbox, .flex-box {
+        flex-direction: column;
+    }
+    form {
+        width: 70%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .flexbox, .flex-box {
+        flex-direction: column;
+    }
+    form {
+        width: 70%;
+    }
+
+}
+
+
+@media screen and (max-width: 375px) {
+    .flexbox, .flex-box {
+        flex-direction: column;
+    }
+    form {
+        width: 70%;
+    }
+
+}
+
