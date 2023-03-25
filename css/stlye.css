@@ -104,7 +104,8 @@ nav
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 2rem; 
+    margin-right: 0rem; 
+    padding-right: 2rem;
 }
 
 
@@ -227,7 +228,7 @@ main {
 .contact {
     border-top: 2px solid;
     text-align: center;
-    width: 75%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 3rem;
@@ -301,6 +302,7 @@ form {
     display: flex;
     margin-bottom: 4rem;
     align-items: center;
+    justify-content: space-between;
     
 
 }
@@ -321,10 +323,12 @@ p {
     font-size: 1.5rem;
     max-width: 100%;
     line-height: 2rem;
+    word-spacing: 1px;
     
 }
 .flex-item p {
     padding: 1rem;
+    word-spacing: 1px;
 }
   
 .flex-item-img img {
@@ -356,21 +360,6 @@ hr {
 
 /* MAIN REFERENCIÁK ALOLDAL */
 
-/* .page-container {
-  position: relative;
-  min-height: 100vh;
-}
-.content-wrap {
-  padding-bottom: 1rem;
-}
-
-.footer-box {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 1rem;
-
-} */
 /* Referenciák - carousel */
 
 /* flickity-fade */
@@ -441,15 +430,76 @@ footer {
     height: 100vh;
 }
 
+/* HAMBURGER MENÜ */
 
+#menu-toogle {
+    visibility: hidden;
+  }
+  
+  .hamburger-button {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 1;
+    text-shadow: 1px 3px 1px var(--bg-color);
+  }
+  
+  .hamburger-lines,
+  .hamburger-lines::before,
+  .hamburger-lines::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: whitesmoke;
+    visibility: hidden;
+  }
+  
+  .hamburger-lines::before {
+    content: "";
+    top: -10px;
+  }
+  
+  .hamburger-lines::after {
+    content: "";
+    top: 10px;
+  }
+  
+  .menu-list {
+    top:0;
+    visibility: visible;
+       
+  }
+
+  #menu-toogle:checked ~ .menu-list {
+    visibility: visible;
+    top: 0px;
+  }
+  
+  #menu-toogle:checked ~ .hamburger-button .hamburger-lines {
+    transform: rotate(45deg);
+  }
+  
+  #menu-toogle:checked ~ .hamburger-button .hamburger-lines:before {
+    display: none;
+  }
+  
+  #menu-toogle:checked ~ .hamburger-button .hamburger-lines:after {
+    top: 0;
+    transform: rotate(90deg);
+  }
 
 /* RESZPONZÍV */
 
 @media screen and (max-width: 1400px) {
     .main-title, .main-sub-title {
         font-size: 4rem;
-        margin-top: 2rem;
-       
+        margin-top: 2rem;  
     }
 
     .main-sub-title {
@@ -466,7 +516,6 @@ footer {
     .callme-box-item-1 p {
         font-size: 1.2rem;
         padding: 0rem;
-        
     }
     .img-szerelo {
         max-width: 300px
@@ -477,16 +526,29 @@ footer {
 }
 
 @media screen and (max-width: 992px) {
+
     .flexbox, .flex-box {
         flex-direction: column;
     }
     form {
         width: 70%;
     }
-
 }
 
 @media screen and (max-width: 768px) {
+    .header {
+        height: 300px;
+    }
+    .menu {
+        overflow: hidden;
+        top: -30px;
+    }
+    .main-sub-title {
+        padding: 0;
+        font-size: 3rem;
+
+    }
+
     .flexbox, .flex-box {
         flex-direction: column;
     }
@@ -494,16 +556,98 @@ footer {
         width: 70%;
     }
 
+
+    .hamburger-button {
+        visibility: visible;
+               
+    }
+    .menu-list {
+        visibility: hidden;  
+        padding: 70px 0;
+        display: block;
+        position: fixed; 
+        top: 0;
+        width: 100%;
+        height: 250px;
+        transition: visibility 0.1s;
+        top: -250px;
+        transition-duration: 0s;
+        z-index: 2;
+    }
+    .first-list-item {
+        margin-top: 0rem;
+
+    }
+    .list-item {
+        display: block;
+        padding: 1rem 3rem;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        
+        cursor: pointer;
+    }
+    .list-item:hover {
+        border-bottom: none;
+        border-top: none;
+    }
+    
+    .header-box {
+        height: 100px;
+        flex-direction: column;
+        align-items: flex-start;
+              
+    }
+    
+    .hamburger-lines,
+    .hamburger-lines::before,
+    .hamburger-lines::after {
+        transition-property: none;
+        visibility: visible;
+    }
+    .logo {
+        display: none;
+    }
+    .callme-box {
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    .callme-box-item-1 {
+        max-width: 75%;
+        
+    }
+    .callme-box-item-1 p{
+        line-height: 2rem; 
+        margin: 1rem auto 1rem auto;
+        
+    }
 }
 
 
+
+
+
+
 @media screen and (max-width: 375px) {
+    .main-sub-title {
+        margin: 1rem;
+        font-size: 2rem;
+    }
     .flexbox, .flex-box {
         flex-direction: column;
     }
     form {
+        width: 90%;
+    }
+    .services {
+        max-width: 100%;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+    
+    .btn {
         width: 70%;
     }
-
 }
 
