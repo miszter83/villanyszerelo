@@ -6,36 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Villanyszereles</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/384906b4d5.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/stlye.css">
 </head>
 <body>
-    <header class="main-page">
-        <nav class="header-box">
-            <div class="logo"><a href="./index.html"><img class="logo" src="./media/villanyszereleslogo-transparent.png" alt="logo"></a></div>
-            <div class="menu">
-                <input type="checkbox" name="hamburger" id="menu-toogle">
-                <label for="menu-toogle" class="hamburger-button">
-                    <span class="hamburger-lines"></span>
-                </label>
-                <ul class="header-menu-list menu-list">
-                    <li><a class="list-item first-list-item" href="./index.html">Főoldal</a></li>
-                    <li><a class="list-item" href="./épületvillamosság.html">Épületvillamosság</a></li>
-                    <li><a class="list-item" href="./garanciális-beüzemelés.html">Beüzemelés</a></li>
-                    <li><a class="list-item" href="./referenciák.html">Referenciák</a></li>
+    <header class="header-bg">
+       <a class="header-logo" href="./index.html"><img class="header-logo" src="./media/villanyszereleslogo-transparent.png" alt="logo"></a>
+        <nav>
+          <input type="checkbox" id="nav-checkbox" class="nav-checkbox">
+                <label for="nav-checkbox">
+                    <span class="nav-checkbox__gomb">
+                        <span class="nav-checkbox__vonal"></span>
+                        <span class="nav-checkbox__vonal"></span>
+                        <span class="nav-checkbox__vonal"></span>
+                    </span>
+                </label>                
+                 <ul class="nav-list">
+                    <li><a class="nav-list__elem" href="./index.html">Főoldal</a></li>
+                    <li><a class="nav-list__elem" href="./épületvillamosság.html">Épületvillamosság</a></li>
+                    <li><a class="nav-list__elem" href="./garanciális-beüzemelés.html">Beüzemelés</a></li>
+                    <li><a class="nav-list__elem" href="./referenciák.html">Referenciák</a></li>
                 </ul>
-            </div>
-        </nav>
-        <div class="main-title-background">
-            <h1 class="main-title">Villszer Kft.</h1>
-        </div>
+        </nav> 
     </header>
+   
     <main>
-        
+    <h1 class="main-title">Villszer Kft.</h1>
        <section class="services" >
             <h2 class="service-main" >Szolgáltatásaim</h2>
-
             <ul class="service-main-box">
                 <li class="service-main-item" >Új családi házak, lakások teljes körű villamos kivitelezése, versenyképes árakon, megbízható kivitelezővel. </li>
                 <li class="service-main-item" >Régi lakások, családi házak felújítása, újra vezetékelése.</li>
@@ -44,15 +44,20 @@
                 <li class="service-main-item" >Elektromos berendezések bekötése.</li>
             </ul>
         </section>
+        
         <div class="callme-box">
             <div class="callme-box-item-1">
-                <p class="callme">Hívjon, vagy írjon bizalommal, akár komplett kivitelezés, akár kisebb munkáról van szó!</p>
+                <p class="callme">Hívjon, vagy írjon bizalommal, akár komplett kivitelezésről, akár kisebb munkáról van szó!</p>
                 <p class="free">Vas vármegyében ingyenes kiszállás!</p>
+                <a class="contactme" href="tel:+36301234567"><i class="fa-solid fa-square-phone"></i>&nbsp;+3630/123-4567</a>
+                <a class="contactme" href="mailto:miszter83@gmail.com"><i class="fa-solid fa-at"></i>&nbsp;miszter83@gmail.com</a>
+                <a class="contactme" href="https://goo.gl/maps/pJxtG1FpaaWVFd8D7" target="_blank"><i class="fa-solid fa-location-dot"></i>&nbsp;9700 Szombathely, utca házszám</a>
             </div>
             <div class="callme-box-item-2">
                 <img class="img-szerelo" src="./media/szerelő.jpg" alt="szerelő">
             </div>
         </div>
+        
         <section>
             <h2 class="contact">Kapcsolat</h2>
             <form action="https://formspree.io/f/mbjejapa" method="post">
@@ -63,11 +68,7 @@
                 <button class="btn form-input-btn" type="submit">Elküld</button>
             </form>
         </section>
-    
-    
-    
     </main>
-
     <footer>
         <div class="footer-box">
             <div class="menu">
@@ -80,7 +81,7 @@
             </div>
             <div class="copy">&copy; Copyright 2023</div>
         </div>
-     
     </footer>
+    
 </body>
 </html>
