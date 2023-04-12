@@ -8,15 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/stlye.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@2/flickity-fade.css">
-    
+    <link rel="stylesheet" href="./css/stlye.css"> 
+    <link rel="stylesheet" href="./css/lightbox.css" />
+    <script src="https://kit.fontawesome.com/384906b4d5.js" crossorigin="anonymous"></script>
 </head>
 <body>
    <div class="fullflex">
     <header>
-      <a class="header-logo" href="./index.html"><img class="header-logo" src="./media/villanyszereleslogo-transparent.png" alt="logo"></a>
+      <a id="scroll-top" class="header-logo" href="./index.html"><img class="header-logo" src="./media/villanyszereleslogo-transparent.png" alt="logo"></a>
        <nav>
          <input type="checkbox" id="nav-checkbox" class="nav-checkbox">
                <label for="nav-checkbox">
@@ -34,67 +33,61 @@
                </ul>
        </nav>
    </header>
-    <main>
-          
+    <main>    
         <h1 class="main-sub-title main-subtitle-flex">Referenciák</h1>
- <div class="page-container">
-  <div class="content-wrap">
- <div class="carousel" data-flickity='{ "fade": true, "imagesLoaded": true, "fullscreen":true }'>
-   <div class="carousel-cell">
-     <img class="carousel-cell-image" src="./references/ref01.jpg">
-   </div>
-   <div class="carousel-cell">
-     <img class="carousel-cell-image" src="./references/ref02.jpg" />
-   </div>
-   <div class="carousel-cell">
-     <img class="carousel-cell-image" src="./references/ref03.jpg" />
-   </div>
-   <div class="carousel-cell">
-     <img class="carousel-cell-image" src="./references/ref04.jpg" />
-   </div>
-   <div class="carousel-cell">
-     <img class="carousel-cell-image" src="https://picsum.photos/720/540/?image=1080" />
-   </div>
-   <div class="carousel-cell">
-     <img class="carousel-cell-image" src="https://picsum.photos/640/640/?image=1074" />
-   </div>
-   <div class="carousel-cell">
-     <img class="carousel-cell-image" src="https://picsum.photos/720/540/?image=1069" />
-   </div>
-   <div class="carousel-cell">
-     <img class="carousel-cell-image" src="https://picsum.photos/800/500/?image=1062" />
-   </div>
-   <div class="carousel-cell">
-     <img class="carousel-cell-image" src="https://picsum.photos/720/540/?image=1002" />
-   </div>
-   <div class="carousel-cell">
-     <img class="carousel-cell-image" src="https://picsum.photos/640/640/?image=935" />
-   </div>
-   <div class="carousel-cell">
-     <img class="carousel-cell-image" src="https://picsum.photos/720/540/?image=855" />
-   </div>
-   <div class="carousel-cell">
-     <img class="carousel-cell-image" src="https://picsum.photos/640/640/?image=824" />
-   </div>
- </div> 
-</div>
-</div>      
+          <div class="page-container">
+            <div class="content-wrap">
+              <div class="gallery-container">
+                <div class="gallery">
+                  <a href="./references/ref01.jpg" data-lightbox="models" data-title="Caption1">
+                    <img src="./references/ref01.jpg" alt="img-1" />
+                  </a>
+                  <a href="./references/ref02.jpg" data-lightbox="models" data-title="Caption2">
+                    <img src="./references/ref02.jpg" alt="img-2" />
+                  </a>
+                  <a href="./references/ref03.jpg" data-lightbox="models" data-title="Caption3">
+                    <img src="./references/ref03.jpg" alt="img-3" />
+                  </a>
+                  <a href="./references/ref04.jpg" data-lightbox="models" data-title="Caption4">
+                    <img src="./references/ref04.jpg" alt="img-4" />
+                  </a>
+                  <a href="./references/ref05.jpg" data-lightbox="models" data-title="Caption5">
+                    <img src="./references/ref05.jpg" alt="img-5" />
+                  </a>
+                  <a href="./references/ref06.jpg" data-lightbox="models" data-title="Caption6">
+                    <img src="./references/ref06.jpg" alt="img-6" />
+                  </a>
+                  <a href="./references/ref07.jpg" data-lightbox="models" data-title="Caption7">
+                    <img src="./references/ref07.jpg" alt="img-7" />
+                  </a>
+                  <a href="./references/ref08.jpg" data-lightbox="models" data-title="Caption8">
+                    <img src="./references/ref08.jpg" alt="img-8" />
+                  </a>
+                </div>
+              </div>
+            </div> 
+          </div> 
     </main>
-    <footer class="footer">
+    <footer>
         <div class="footer-box">
             <div class="menu">
                 <ul class="menu-list">
-                    <li><a class="footer-list-item" href="./index.html">Főoldal</a></li>
-                    <li><a class="footer-list-item" href="./épületvillamosság.html">Épületvillamosság</a></li>
-                    <li><a class="footer-list-item" href="./garanciális-beüzemelés.html">Garanciális beüzemelés</a></li>
-                    <li><a class="footer-list-item" href="./referenciák.html">Referenciák</a></li>
+                    <li><a class="footer-list-item" href="#">Impresszum</a></li>
+                    <li><a class="footer-list-item" href="#">Adatvédelmi irányelvek</a></li>
                 </ul>
+                <ul class="footer-contact" >
+                    <a class="footer-contactme" href="tel:+36301234567"><i class="fa-solid fa-square-phone"></i>&nbsp;+3630/123-4567</a>
+                    <a class="footer-contactme" href="mailto:miszter83@gmail.com"><i class="fa-solid fa-at"></i>&nbsp;miszter83@gmail.com</a>
+                    <a class="footer-contactme" href="https://goo.gl/maps/pJxtG1FpaaWVFd8D7" target="_blank"><i class="fa-solid fa-location-dot"></i>&nbsp;9700 Szombathely, utca házszám</a>
+                </ul>   
             </div>
-            <div class="copy">&copy; Copyright 2023</div>
-        </div>     
+            <!-- <div class="fooldal-top">
+                <a href="#villszer"><i class="fa-solid fa-chevron-up"></i></a>
+            </div>  -->
+            <div class="copy">&copy; Copyright Stumpfel Tibor 2023</div>
+        </div>
     </footer>
   </div>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="https://unpkg.com/flickity-fade@2/flickity-fade.js"></script>
+  <script src="./js/lightbox-plus-jquery.js"></script>
 </body>
 </html>

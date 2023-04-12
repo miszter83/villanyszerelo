@@ -10,10 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/stlye.css">
+    <script src="https://kit.fontawesome.com/384906b4d5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="header-bg">
-       <a class="header-logo" href="./index.html"><img class="header-logo" src="./media/villanyszereleslogo-transparent.png" alt="logo"></a>
+       <a  id="scroll-top" class="header-logo" href="./index.html"><img class="header-logo" src="./media/villanyszereleslogo-transparent.png" alt="logo"></a>
         <nav>
           <input type="checkbox" id="nav-checkbox" class="nav-checkbox">
                 <label for="nav-checkbox">
@@ -34,8 +35,18 @@
    
     <main>
     <h1 class="main-title">Villszer Kft.</h1>
-       <section class="services" >
-            <h2 class="service-main" >Szolgáltatásaim</h2>
+        <section class="rolunk">
+            <h2 class="rolunk-main">Rólunk</h2>
+                <div class="rolunk-main-box">
+                    <p class="rolunk-text">
+                        Cégünket 15 éve alapítottuk Vas vármegyében, ami azóta 15 fős csapattá fejlődött. Fontos számunkra a határidőre elvégzett precíz munka, hiszen mi is csak így tudunk növekedni. Csapatunkban dolgozik regisztrált villanyszerelő és villamos biztonsági felülvizsgáló is.  
+                    </p>
+                    <img class="img-szerelo" src="./media/szerelő.jpg" alt="szerelő">
+                </div>
+
+        </section>
+        <section class="services" >
+            <h2 class="service-main" >Szolgáltatásaink</h2>
             <ul class="service-main-box">
                 <li class="service-main-item" >Új családi házak, lakások teljes körű villamos kivitelezése, versenyképes árakon, megbízható kivitelezővel. </li>
                 <li class="service-main-item" >Régi lakások, családi házak felújítása, újra vezetékelése.</li>
@@ -53,18 +64,28 @@
                 <a class="contactme" href="mailto:miszter83@gmail.com"><i class="fa-solid fa-at"></i>&nbsp;miszter83@gmail.com</a>
                 <a class="contactme" href="https://goo.gl/maps/pJxtG1FpaaWVFd8D7" target="_blank"><i class="fa-solid fa-location-dot"></i>&nbsp;9700 Szombathely, utca házszám</a>
             </div>
-            <div class="callme-box-item-2">
-                <img class="img-szerelo" src="./media/szerelő.jpg" alt="szerelő">
-            </div>
+            
         </div>
         
         <section>
             <h2 class="contact">Kapcsolat</h2>
             <form action="https://formspree.io/f/mbjejapa" method="post">
-                <input class="form-input" type="text" name="nev" id="nev" placeholder="Név" required>
-                <input class="form-input" type="email" name="email" id="email" placeholder="E-mail" required>
-                <input class="form-input" type="tel" name="telefon" id="telefon" placeholder="Telefonszám">
-                <textarea  class="form-input" placeholder="Üzenet" name="uzenet" id="uezenet" cols="30" rows="10" required></textarea>
+                <div class="inputBox">
+                    <input class="form-input" type="text" name="nev" id="nev"  required>
+                    <span>Név</span>
+                </div>
+                <div class="inputBox">
+                    <input class="form-input" type="email" name="email" id="email"  required>
+                    <span>Email</span>
+                </div>
+                <div class="inputBox">
+                    <input class="form-input" type="tel" name="Telefonszám" id="telefonszam"  required>
+                    <span>Telefonszám</span>
+                </div>
+                <div class="inputBox">
+                    <textarea  class="form-input" name="uzenet" id="uzenet" cols="30" rows="10" required></textarea>
+                    <span>Üzenet</span>
+                </div>
                 <button class="btn form-input-btn" type="submit">Elküld</button>
             </form>
         </section>
@@ -73,13 +94,19 @@
         <div class="footer-box">
             <div class="menu">
                 <ul class="menu-list">
-                    <li><a class="footer-list-item" href="./index.html">Főoldal</a></li>
-                    <li><a class="footer-list-item" href="./épületvillamosság.html">Épületvillamosság</a></li>
-                    <li><a class="footer-list-item" href="./garanciális-beüzemelés.html">Garanciális beüzemelés</a></li>
-                    <li><a class="footer-list-item" href="./referenciák.html">Referenciák</a></li>
+                    <li><a class="footer-list-item" href="#">Impresszum</a></li>
+                    <li><a class="footer-list-item" href="#">Adatvédelmi irányelvek</a></li>
                 </ul>
+                <ul class="footer-contact" >
+                    <a class="footer-contactme" href="tel:+36301234567"><i class="fa-solid fa-square-phone"></i>&nbsp;+3630/123-4567</a>
+                    <a class="footer-contactme" href="mailto:miszter83@gmail.com"><i class="fa-solid fa-at"></i>&nbsp;miszter83@gmail.com</a>
+                    <a class="footer-contactme" href="https://goo.gl/maps/pJxtG1FpaaWVFd8D7" target="_blank"><i class="fa-solid fa-location-dot"></i>&nbsp;9700 Szombathely, utca házszám</a>
+                </ul>   
             </div>
-            <div class="copy">&copy; Copyright 2023</div>
+            <div class="fooldal-top">
+                <a href="#scroll-top"><i class="fa-solid fa-chevron-up"></i></a>
+            </div> 
+            <div class="copy">&copy; Copyright Stumpfel Tibor 2023</div>
         </div>
     </footer>
     

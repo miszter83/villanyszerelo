@@ -21,6 +21,7 @@
 html {
   height: 100%;
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -130,6 +131,41 @@ main {
     
    
 }
+
+.rolunk {
+    max-width: 75%;
+    margin: 0 auto;
+}
+.rolunk-main {
+    font-size: 6rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 0rem auto 10rem auto;
+    padding-bottom: 3rem;
+    border-bottom: 2px solid;
+}
+
+.rolunk-main-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.rolunk-text {
+    padding: 5rem;
+    line-height: 200%;
+}
+
+.img-szerelo {
+    object-fit: contain;
+    margin-top: 2rem;
+    width: 100%;
+    height: auto;
+    border: 2px solid;
+}
+
+
 .services {
     display: flex;
     flex-direction: column;
@@ -149,8 +185,7 @@ main {
     font-size: 6rem;
     font-weight: 500;
     text-align: center;
-    margin-bottom: 4rem;
-    padding-bottom: 1rem;
+    margin: 15rem auto 4rem auto;
     
 }
 
@@ -162,17 +197,17 @@ main {
 
 .callme-box{
     display: flex;
-    margin: 3rem auto;
-    max-width: 75%;
     justify-content: center;
-    align-items: center;
-    
+    max-width: 75%;
+    margin: 0 auto;
+    padding: 8rem 0;
+    border-bottom: 2px solid;
     
 }
 
 .callme-box-item-1 {
     max-width: 40%;
-    line-height: 4rem;
+    
 }
 .callme-box-item-1 p {
     font-size: 3rem;
@@ -192,19 +227,12 @@ main {
     text-shadow: 1px 1px 5px rgba(253, 250, 250, 1);
 }
 
-.img-szerelo {
-    object-fit: contain;
-    margin-top: 2rem;
-    width: 100%;
-    height: auto;
-    border: 2px solid;
-}
 
 
 /* ŰRLAP */
 
 .contact {
-    border-top: 2px solid;
+   
     text-align: center;
     width: 75%;
     margin-left: auto;
@@ -214,14 +242,72 @@ main {
 }
 
 form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
     width:40%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
+    color: var(--main-input-color);
+    border-bottom: 2px solid whitesmoke;
+    margin: 1rem auto 0 auto;
+    padding: 1rem 0;
 
 }
 
-.form-input {
+.inputBox {
+    position: relative;
+    width: 80%;
+  }
+  
+  .inputBox input,
+  .inputBox textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--white);
+    outline: none;
+    font-size: 2rem;
+    transition: 0.5s;
+    background: none;
+  }
+  
+  .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    font-size: 2rem;
+    pointer-events: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+  }
+  
+  /* Mezőbe kattintás utáni állapot */
+  
+  .inputBox input:valid ~ span,
+  .inputBox input:focus ~ span,
+  .inputBox textarea:valid ~ span,
+  .inputBox textarea:focus ~ span {
+    color: var(--bg-color);
+    transform: translateX(10px) translateY(-7px); /* Elhelyezi a szöveget a borderen */
+    font-size: 1.2rem; /* Betüméret akkora, hogy elférjen */
+    padding: 0 10px;
+    background: white; /* Megtöri a bordert, így háttérszínnel azonos színű kell hogy legyen */
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    letter-spacing: 0.2rem;
+  }
+  
+  /* .inputBox:nth-child(2) input:valid ~ span,
+  .inputBox:nth-child(2) input:focus ~ span {
+    background-color: blue;
+    color: green;
+  } */
+  
+
+/* .form-input {
     display: block;
     border: none;
     background: none;
@@ -232,10 +318,7 @@ form {
     padding: 1rem 0;
     font-size: 1.8rem;
 }
-
-::placeholder {
-    font-size: 1.8rem;
-}
+ */
 
 .btn {
     text-decoration: none;
@@ -340,45 +423,29 @@ hr {
 
 /* Referenciák - carousel */
 
-/* flickity-fade */
-
-.ures {
+/* .ures {
   height: 300px;
-}
+} */
 
-.flickity-enabled.is-fade .flickity-slider > * {
-  pointer-events: none;
-  z-index: 0;
-}
-
-.flickity-enabled.is-fade .flickity-slider > .is-selected {
-  pointer-events: auto;
-  z-index: 1;
-}
-
-.carousel {
-  background: #252528;
-  margin-bottom: 5rem;
-}
-
-.carousel-cell {
-  width: 100%;
-  height: 300px;
-  margin-right: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.carousel.is-fullscreen .carousel-cell {
-  height: 100%;
-}
-
-.carousel-cell-image {
-  display: block;
-  max-height: 100%;
-} 
-
+.gallery-container {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 8%;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+  }
+  
+  .gallery img {
+    width: 100%;
+  }
+  
   
 
 /* FOOTER */
@@ -407,11 +474,47 @@ footer {
     padding: 1rem;
 }
 
+.footer-contact  {
+    display: flex;
+    justify-content: center;  
+}
+
+.footer-contactme {
+    font-size: 1.8rem;
+    padding: 1rem;
+}
+
+
  .copy {
     font-size: 1.5rem;
     text-align: center;
     margin: 2rem;
  }
+
+ /*== Scroll Down Arrow ==*/
+
+ .fooldal-top a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    border-radius: 100%;  
+    border: 3px solid ;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .fa-chevron-up {
+    color: var(--white);
+    font-size: 3rem;
+  }
+    .fa-chevron-up:hover {
+      color: whitesmoke;
+  
+    }
+  
 
 
 
